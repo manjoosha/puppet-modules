@@ -1,0 +1,17 @@
+Install JavaJDK using puppet module.
+
+Download java module from puppet forge:
+
+    puppet module install puppetlabs-java
+    You will get java folder under /etc/puppet/modules
+    Go to /etc/puppet/manifest/site.pp
+    add 
+      class { 'java': }
+      
+       By default, the module will install the jdk package.
+       
+        If you want install jre instead of jdk,
+       
+        class { 'java':
+          distribution => 'jre',
+              }
